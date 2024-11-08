@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "22dd010d-5863-46ba-8ef2-5597103e1be2",
+		"name": "Payments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29185004"
+	},
+	"item": [
+		{
+			"name": "Paymob",
+			"item": [
+				{
+					"name": "payment-process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"amount_cents\": \"4000\",\r\n  \"currency\": \"EGP\",\r\n   \"shipping_data\":{\r\n    \"first_name\": \"Test\",\r\n    \"last_name\": \"Account\",\r\n    \"phone_number\": \"01010101010\",\r\n    \"email\": \"test@account.com\"\r\n  }\r\n\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/process",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"process"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment-process",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n  \"amount_cents\": \"4000\",\r\n  \"currency\": \"EGP\",\r\n  \"shipping_data\":{\r\n    \"first_name\": \"Test\",\r\n    \"last_name\": \"Account\",\r\n    \"phone_number\": \"01010101010\",\r\n    \"email\": \"test@account.com\"\r\n  }\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/process",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"process"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Oct 2024 14:06:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Oct 2024 14:06:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"url\": \"https://accept.paymob.com/standalone/?ref=i_LRR2eTVheGlCQ1JnRXE1cHRUK1dlelVLQT09X1hSeTZrVElzck9HcFVKUTBRem8zRFE9PQ\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
