@@ -33,7 +33,7 @@ class PaymobPaymentService extends BasePaymentService implements PaymentGatewayI
         return $response->getData(true)['data']['token'];
     }
 
-    public function sendPayment(Request $request): array
+    public function sendPayment(Request $request):array
     {
         $this->header['Authorization'] = 'Bearer ' . $this->generateToken();
         //validate data before sending it
@@ -45,6 +45,7 @@ class PaymobPaymentService extends BasePaymentService implements PaymentGatewayI
         //handel payment response data and return it
         if ($response->getData(true)['success']) {
 
+
             return ['success' => true, 'url' => $response->getData(true)['data']['url']];
         }
 
@@ -55,6 +56,7 @@ class PaymobPaymentService extends BasePaymentService implements PaymentGatewayI
     {
         $response = $request->all();
         Storage::put('paymob_response.json', json_encode($request->all()));
+
         if (isset($response['success']) && $response['success'] === 'true') {
 
             return true;
