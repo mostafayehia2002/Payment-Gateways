@@ -49,7 +49,7 @@ class PaymobPaymentService extends BasePaymentService implements PaymentGatewayI
             return ['success' => true, 'url' => $response->getData(true)['data']['url']];
         }
 
-        return ['success' => false, 'url' => null];
+        return ['success' => false, 'url' => route('payment.failed')];
     }
 
     public function callBack(Request $request): bool
