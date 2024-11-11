@@ -32,8 +32,8 @@ class TapPaymentService extends BasePaymentService implements PaymentGatewayInte
 
             return['success'=>true,'url'=>$response->getData(true)['data']['transaction']['url']];
         }
-        //return['success'=>false,'url'=>route('payment.failed')];
-        return  $response;
+        return['success'=>false,'url'=>route('payment.failed')];
+
     }
     public function callBack(Request $request): bool
     {
