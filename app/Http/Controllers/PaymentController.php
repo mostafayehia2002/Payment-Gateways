@@ -18,8 +18,15 @@ class PaymentController extends Controller
 
     public function paymentProcess(Request $request)
     {
+        $response= $this->paymentGateway->sendPayment($request);
 
-        return $this->paymentGateway->sendPayment($request);
+        if($request->is('api/*')){
+
+            return response()->json($response, 200);
+        }
+
+        return redirect($response['url']);
+
     }
 
     public function callBack(Request $request): \Illuminate\Http\RedirectResponse

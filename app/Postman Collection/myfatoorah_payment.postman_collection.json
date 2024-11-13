@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "7b2af72d-b9d6-4b99-877b-af766155ff9e",
+		"name": "payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29185004"
+	},
+	"item": [
+		{
+			"name": "My Fatoorah",
+			"item": [
+				{
+					"name": "payment-process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"InvoiceValue\": 50,\r\n    \"DisplayCurrencyIso\": \"EGP\",\r\n    \"CustomerName\": \"mostafa\",\r\n    \"CustomerEmail\": \"gad993813@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/process",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"process"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment-process",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"InvoiceValue\": 50,\r\n    \"DisplayCurrencyIso\": \"EGP\",\r\n    \"CustomerName\": \"mostafa\",\r\n    \"CustomerEmail\": \"gad993813@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/process",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"process"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Nov 2024 14:28:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Nov 2024 14:28:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"url\": \"https://demo.MyFatoorah.com/KWT/ie/01072465752742-7399420d\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
