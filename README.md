@@ -46,7 +46,7 @@ Copy the example environment file and rename it to .env:
 copy .env.example .env
 ```
 Open the .env file and update the necessary configurations, such as database settings.
-and  replace SESSION_DRIVER=file
+and  replace SESSION_DRIVER=file and CACHE_STORE=file
 
 5.**Generate Application Key**
 
