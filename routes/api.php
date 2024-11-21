@@ -10,4 +10,4 @@ Route::get('/user', function (Request $request) {
 
 
 Route::post('/payment/process', [PaymentController::class, 'paymentProcess']);
-Route::get('/payment/callback', [PaymentController::class, 'callBack']);
+Route::match(['GET','POST'],'/payment/callback', [PaymentController::class, 'callBack']);
