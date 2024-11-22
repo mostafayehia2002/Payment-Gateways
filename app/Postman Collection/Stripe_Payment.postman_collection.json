@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "fd1d9bab-782d-429e-8044-63e74692890e",
+		"name": "Payments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29185004"
+	},
+	"item": [
+		{
+			"name": "Stripe",
+			"item": [
+				{
+					"name": "payment-process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":100,\r\n    \"currency\":\"USD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/process",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"process"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment-process",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\":100,\r\n    \"currency\":\"USD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/process",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"process"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Nov 2024 15:06:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Nov 2024 15:06:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"url\": \"https://checkout.stripe.com/c/pay/cs_test_a1ZE3vJPCLfUA6jLi00TS8sDEeOTMHi2kO6X8MUtrjiZFEneEUitFjL5jd#fidkdWxOYHwnPyd1blpxYHZxWjA0VE1KXWFXVVdsNDM1f3BJdD1kTVY0aUtOdGp8cGlOb1FUMUx2cGtJcjJVQGl2TGJ%2FdDFGfHUwdnU0PUBzbzd9cEBydE9vTm5iYjRfQ11tUGNcTElOYGpENTVrS0ldX3xxfycpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
