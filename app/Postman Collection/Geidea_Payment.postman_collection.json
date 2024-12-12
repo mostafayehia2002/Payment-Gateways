@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "22dd010d-5863-46ba-8ef2-5597103e1be2",
+		"name": "Payments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29185004"
+	},
+	"item": [
+		{
+			"name": "Geidea",
+			"item": [
+				{
+					"name": "payment-process",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 20,\r\n  \"currency\": \"SAR\",\r\n  \"customer\": {\r\n    \"name\": \"Kiran\",\r\n    \"email\": \"testmail@geidea.com\",\r\n    \"phoneCountryCode\": \"+20\",\r\n    \"phoneNumber\": \"8003030083\"\r\n  },\r\n  \"eInvoiceDetails\": {\r\n    \"extraChargesType\": \"Amount\",\r\n    \"invoiceDiscountType\": \"Amount\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment/process",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								"process"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment-process",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"amount\": 20,\r\n  \"currency\": \"SAR\",\r\n  \"customer\": {\r\n    \"name\": \"Kiran\",\r\n    \"email\": \"testmail@geidea.com\",\r\n    \"phoneCountryCode\": \"+20\",\r\n    \"phoneNumber\": \"8003030083\"\r\n  },\r\n  \"eInvoiceDetails\": {\r\n    \"extraChargesType\": \"Amount\",\r\n    \"invoiceDiscountType\": \"Amount\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/payment/process",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"process"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Oct 2024 16:06:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Oct 2024 16:06:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"url\": \"https://ksamerchant.geidea.net/payByLink/o42-5kr-550-70v\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}

@@ -10,9 +10,9 @@ class BasePaymentService
     /**
      * Create a new class instance.
      */
-    protected string $base_url;
+    protected  $base_url;
     protected array $header;
-    protected function buildRequest($method, $url, $data = null,$type='json'): \Illuminate\Http\JsonResponse
+    protected function buildRequest($method, $url, $data = null, $type = 'json'): \Illuminate\Http\JsonResponse
     {
         try {
             //type ? json || form_params
